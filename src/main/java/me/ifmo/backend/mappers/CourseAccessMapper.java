@@ -1,36 +1,20 @@
 package me.ifmo.backend.mappers;
 
 import me.ifmo.backend.DTO.access.CourseAccessDTO;
-import me.ifmo.backend.entities.Course;
 import me.ifmo.backend.entities.CourseAccess;
-import me.ifmo.backend.entities.User;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {UserMapper.class, CourseMapper.class})
 public interface CourseAccessMapper {
 
-    @Mapping(target = "userId", source = "user.id")
-    @Mapping(target = "courseId", source = "course.id")
+    @Mapping(target = "userId", source = "user")
+    @Mapping(target = "courseId", source = "course")
     CourseAccessDTO toDto(CourseAccess access);
 
-    @Mapping(target = "user", expression = "java(userFromId(dto.getUserId()))")
-    @Mapping(target = "course", expression = "java(courseFromId(dto.getCourseId()))")
+    @Mapping(target = "user", source = "userId")
+    @Mapping(target = "course", source = "courseId")
     @Mapping(target = "grantedAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
     CourseAccess toEntity(CourseAccessDTO dto);
-
-    default User userFromId(Long id) {
-        if (id == null) return null;
-        User user = new User();
-        user.setId(id);
-        return user;
-    }
-
-    default Course courseFromId(Long id) {
-        if (id == null) return null;
-        Course course = new Course();
-        course.setId(id);
-        return course;
-    }
 }
