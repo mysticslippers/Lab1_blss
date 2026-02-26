@@ -8,7 +8,7 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface OutboxMessageMapper {
 
-    OutboxMessageDTO toDto(OutboxMessage message);
+    OutboxMessageDTO toDto(OutboxMessage msg);
 
     @Mapping(target = "createdAt", ignore = true)
     @Mapping(target = "updatedAt", ignore = true)
