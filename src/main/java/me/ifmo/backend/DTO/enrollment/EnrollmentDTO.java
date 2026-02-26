@@ -1,4 +1,4 @@
-package me.ifmo.backend.DTO;
+package me.ifmo.backend.DTO.enrollment;
 
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
