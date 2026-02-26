@@ -1,8 +1,9 @@
-package me.ifmo.backend.DTO;
+package me.ifmo.backend.DTO.course;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import me.ifmo.backend.entities.enums.CourseStatus;
 
 import java.time.OffsetDateTime;
 
@@ -30,7 +31,7 @@ public class CourseDTO {
 
     private Integer capacity;
 
-    private String status;
+    private CourseStatus status;
 
     @NotNull(message = "Course.enrollmentOpen must not be null")
     private Boolean enrollmentOpen;
