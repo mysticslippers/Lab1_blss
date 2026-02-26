@@ -1,4 +1,4 @@
-package me.ifmo.backend.DTO;
+package me.ifmo.backend.DTO.payment;
 
 import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.Min;
@@ -36,10 +36,6 @@ public class PaymentDTO {
 
     @NotNull(message = "Payment.status must not be null")
     private PaymentStatus status;
-
-    @NotBlank(message = "Payment.provider must not be blank")
-    @Size(max = 64, message = "Payment.provider must be at most 64 characters")
-    private String provider;
 
     @Size(max = 128, message = "Payment.providerPaymentId must be at most 128 characters")
     private String providerPaymentId;
