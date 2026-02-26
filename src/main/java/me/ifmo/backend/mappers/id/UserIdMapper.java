@@ -4,7 +4,7 @@ import me.ifmo.backend.entities.User;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface UserMapper {
+public interface UserIdMapper {
 
     default Long toId(User user) {
         return user == null ? null : user.getId();
