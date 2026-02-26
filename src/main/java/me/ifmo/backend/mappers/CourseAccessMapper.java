@@ -5,7 +5,7 @@ import me.ifmo.backend.entities.CourseAccess;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring", uses = {UserMapper.class, CourseMapper.class})
+@Mapper(componentModel = "spring", uses = {UserMapper.class, CourseIdMapper.class})
 public interface CourseAccessMapper {
 
     @Mapping(target = "userId", source = "user")
