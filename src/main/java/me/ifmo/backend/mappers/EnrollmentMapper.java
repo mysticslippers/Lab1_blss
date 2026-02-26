@@ -2,6 +2,8 @@ package me.ifmo.backend.mappers;
 
 import me.ifmo.backend.DTO.enrollment.EnrollmentDTO;
 import me.ifmo.backend.entities.Enrollment;
+import me.ifmo.backend.mappers.id.CourseIdMapper;
+import me.ifmo.backend.mappers.id.UserMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

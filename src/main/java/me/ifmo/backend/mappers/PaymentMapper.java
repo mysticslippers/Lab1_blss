@@ -2,6 +2,7 @@ package me.ifmo.backend.mappers;
 
 import me.ifmo.backend.DTO.payment.PaymentDTO;
 import me.ifmo.backend.entities.Payment;
+import me.ifmo.backend.mappers.id.EnrollmentIdMapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

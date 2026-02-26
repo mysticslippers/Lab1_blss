@@ -1,4 +1,4 @@
-package me.ifmo.backend.mappers;
+package me.ifmo.backend.mappers.id;
 
 import me.ifmo.backend.entities.Payment;
 import org.mapstruct.Mapper;
