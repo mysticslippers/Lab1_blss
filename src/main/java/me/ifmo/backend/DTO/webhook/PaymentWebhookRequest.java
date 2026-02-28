@@ -32,4 +32,8 @@ public class PaymentWebhookRequest {
 
     @Size(max = 512, message = "PaymentWebhookRequest.signature must be at most 512 characters")
     private String signature;
+
+    @NotBlank(message = "PaymentWebhookRequest.providerPaymentId must not be blank")
+    @Size(max = 128, message = "PaymentWebhookRequest.providerPaymentId must be at most 128 characters")
+    private String providerPaymentId;
 }
