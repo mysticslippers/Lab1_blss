@@ -50,6 +50,9 @@ public class PaymentDTO {
 
     @AssertTrue(message = "Payment.paidAt can be set only when status is PAID or REFUNDED")
     public boolean isPaidAtConsistent() {
-        return paidAt == null || status == PaymentStatus.PAID || status == PaymentStatus.REFUNDED;
+        return paidAt == null
+                || status == null
+                || status == PaymentStatus.PAID
+                || status == PaymentStatus.REFUNDED;
     }
 }
