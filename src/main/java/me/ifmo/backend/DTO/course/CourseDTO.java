@@ -2,6 +2,7 @@ package me.ifmo.backend.DTO.course;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.*;
 import me.ifmo.backend.entities.enums.CourseStatus;
 
@@ -27,6 +28,7 @@ public class CourseDTO {
     private Integer priceCents;
 
     @NotBlank(message = "Course.currency must not be blank")
+    @Size(min = 3, max = 3, message = "Course.currency must be exactly 3 characters")
     private String currency;
 
     private Integer capacity;
