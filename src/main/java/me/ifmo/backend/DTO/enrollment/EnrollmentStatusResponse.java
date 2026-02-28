@@ -24,6 +24,5 @@ public class EnrollmentStatusResponse {
     @NotNull(message = "EnrollmentStatusResponse.paymentStatus must not be null")
     private PaymentStatus paymentStatus;
 
-    @NotNull(message = "EnrollmentStatusResponse.accessStatus must not be null")
     private AccessStatus accessStatus;
 }
