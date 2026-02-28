@@ -16,6 +16,10 @@ spring:
     activate:
       on-profile: local
 
+  mvc:
+    servlet:
+      path: /api
+
   datasource:
     url: jdbc:postgresql://localhost:5432/studs
     username: s368530
@@ -43,6 +47,10 @@ spring:
   config:
     activate:
       on-profile: helios
+
+  mvc:
+    servlet:
+      path: /api
 
   datasource:
     url: jdbc:postgresql://pg:5432/studs
