@@ -12,8 +12,8 @@ public interface PaymentIdMapper {
 
     default Payment fromId(Long id) {
         if (id == null) return null;
-        Payment p = new Payment();
-        p.setId(id);
-        return p;
+        Payment payment = new Payment();
+        payment.setId(id);
+        return payment;
     }
 }

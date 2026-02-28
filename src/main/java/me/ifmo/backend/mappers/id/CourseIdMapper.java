@@ -12,8 +12,8 @@ public interface CourseIdMapper {
 
     default Course fromId(Long id) {
         if (id == null) return null;
-        Course c = new Course();
-        c.setId(id);
-        return c;
+        Course course = new Course();
+        course.setId(id);
+        return course;
     }
 }

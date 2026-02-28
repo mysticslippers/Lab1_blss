@@ -12,8 +12,8 @@ public interface UserIdMapper {
 
     default User fromId(Long id) {
         if (id == null) return null;
-        User u = new User();
-        u.setId(id);
-        return u;
+        User user = new User();
+        user.setId(id);
+        return user;
     }
 }
