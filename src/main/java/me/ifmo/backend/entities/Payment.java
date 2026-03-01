@@ -22,7 +22,7 @@ public class Payment {
     @JoinColumn(name = "enrollment_id", nullable = false, unique = true)
     private Enrollment enrollment;
 
-    @Column(name = "provider_payment_id", unique = true, length = 255)
+    @Column(name = "provider_payment_id", unique = true)
     private String providerPaymentId;
 
     @Column(name = "amount_cents", nullable = false)
