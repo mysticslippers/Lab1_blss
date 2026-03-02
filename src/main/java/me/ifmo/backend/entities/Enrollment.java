@@ -27,7 +27,7 @@ public class Enrollment {
     private Course course;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, columnDefinition = "ENROLLMENT_STATUS")
+    @Column(columnDefinition = "ENROLLMENT_STATUS", nullable = false)
     private EnrollmentStatus status;
 
     @Column(name = "reject_reason")
@@ -38,4 +38,32 @@ public class Enrollment {
 
     @Column(name = "updated_at", nullable = false, insertable = false, updatable = false)
     private LocalDateTime updatedAt;
+
+    @Override
+    public String toString() {
+        Long userId = (user != null ? user.getId() : null);
+        Long courseId = (course != null ? course.getId() : null);
+
+        return "Enrollment{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", courseId=" + courseId +
+                ", status=" + status +
+                ", rejectReason='" + rejectReason + '\'' +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (this == object) return true;
+        if (!(object instanceof Enrollment other)) return false;
+        return id != null && id.equals(other.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 }
