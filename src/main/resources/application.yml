@@ -43,7 +43,6 @@ spring:
         format_sql: true
 
 bank:
-  base-url: http://localhost:1234
   callback-url: http://localhost:8080/api/payments/webhook
 
 ---
@@ -79,5 +78,4 @@ spring:
         format_sql: true
 
 bank:
-  base-url: http://localhost:1234
   callback-url: http://localhost:8080/api/payments/webhook
